@@ -1,0 +1,17 @@
+{
+  "name": "councilmember-lookup",
+  "version": "1.0.0",
+  "description": "Final project for GA js-dc-4: A DC focused council member lookup that shows users councilmembers in DC zip codes and supporting info about each one. Just another #RESISTANCE assistant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lentie Ward",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "nodemon": "^1.11.0"
+  }
+}
