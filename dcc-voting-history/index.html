@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
+  <script data-main="js/index" src="js/require.js"></script>
 </head>
 <body>
   <svg class="duotone-filters" xmlns="http://www.w3.org/2000/svg">
@@ -34,71 +35,46 @@
       <div class="small-12 medium-10 large-8 small-centered column">
         <h1 class="ts">Council Member Voting Record</h1>
         <p class="ts">Select a council member to view their voting record in the current Council Period. Legislation search results ordered chronologically from the most recent votes.</p>
-        <form class="js-serach-criteria">
-          <select>
+        <form class="js-search-criteria">
+          <select class="js-select">
             <!--  populated w Members API. the value should be set to the councilmember ID -->
             <option value="">Select a Councilmember</option>
-            <option value="one">One</option>
-            <option value="two">Two</option>
-            <option value="three">Three</option>
           </select>
           <fieldset class="row collapse">
             <div class="small-12 medium-4 column">
               <p class="ts text-left">Results to return (max: 100)</p>
             </div>
             <div class="small-12 medium-8 column">
-              <!-- <input class="range-slider" type="range" value="10" min="0" max="500">
-              <span class="range-value">0</span> -->
               <input id="js-range" type="range" name="rangeInput" min="0" max="100" value="10" onchange="updateTextInput(this.value);">
-            <!-- </div>
-            <div class="small-12 medium-2 column"> -->
               <input type="text" id="js-range-text-input" class="range-value" value="" placeholder="0-100" onchange="updateRangeVal(this.value);">
             </div>
           </fieldset>
           <input type="submit" class="button" value="Submit">
         </form>
-      </div>
-    </div>
+      </div> <!-- /.column -->
+    </div> <!-- /.row -->
   </header>
 
   <main class="row">
-    <h1>DC Council Member Voting Record</h1>
-    <ol>
-      <li>Select Council Member
-        <ul>
-          <li>Dropdown will be populated with the council member in the current coucil period (22)</li>
-          <li>Once selected, the council member's full name and title</li>
-        </ul>
-      </li>
-      <li>Filter Results: number of results (could be a range selector to limit number of total results)</li>
-      <li>Upon submission:
-        <ul>
-          <li>display results in a table below</li>
-        </ul>
-      </li>
-    </ol>
+    <div class="small-12 large-10 column small-centered">
+      <article class="member-info hide">
+        <h2><span class="js-member-title">Title </span>Council Member Name</h2>
+      </article>
 
-    <table class="legislation-list">
-      <thead>
-        <tr class="row">
-          <th class="small-12 large-2 column">Bill</th>
-          <th class="small-12 large-9 column">Name</th>
-          <th class="small-12 large-1 column">Vote</th>
-        </tr>
-      </thead>
-      <tbody>
+      <table class="legislation-list hide">
+        <thead>
+          <tr class="row">
+            <th class="small-12 large-2 column">Bill</th>
+            <th class="small-12 large-9 column">Name</th>
+            <th class="small-12 large-1 column">Vote</th>
+          </tr>
+        </thead>
+        <tbody>
 
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+
+    </div>
   </main>
-
-  <script>
-  function updateTextInput(val) {
-    document.getElementById('js-range-text-input').value=val;
-  }
-  function updateRangeVal(val) {
-    document.getElementById('js-range').value=val;
-  }
-  </script>
 </body>
 </html>

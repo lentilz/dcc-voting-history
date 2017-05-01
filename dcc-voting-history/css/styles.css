@@ -13,6 +13,13 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+main {
+  padding: 40px 0;
+}
+
+.hide {
+  display: none;
+}
 .duotone-filters {
     height: 0;
     left: -9999em;
@@ -51,7 +58,7 @@ body {
 .c-global-header label {
   color: #ffffff;
 }
-.js-results .c-global-header {
+.js-form-active .c-global-header {
   min-height: 100px;
 }
 
@@ -152,7 +159,7 @@ input[type="range"]:active::-moz-range-thumb {
   color: #000;
   line-height: 20px;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 3px 0 0 3px;
   background: #fff;
   padding: 5px 10px;
   margin: 0 0 0 8px;
