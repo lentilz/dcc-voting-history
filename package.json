@@ -1,7 +1,7 @@
 {
-  "name": "councilmember-lookup",
+  "name": "dcc-voting-history",
   "version": "1.0.0",
-  "description": "Final project for GA js-dc-4: A DC focused council member lookup that shows users councilmembers in DC zip codes and supporting info about each one. Just another #RESISTANCE assistant",
+  "description": "Final project for GA js-dc-4: An interface to display current DC Council Member's voting record on the latest legislation.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

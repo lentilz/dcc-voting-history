@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DC Council Member Voting History</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <svg class="duotone-filters" xmlns="http://www.w3.org/2000/svg">
+    <filter id="duotone_redblue">
+        <feColorMatrix type="matrix" result="gray" values="1 0 0 0 0
+                    1 0 0 0 0
+                    1 0 0 0 0
+                    0 0 0 1 0">
+        </feColorMatrix>
+
+        <feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+            <feFuncR type="table" tableValues="0.00294117647058825 0.9372549019607843"></feFuncR>
+            <feFuncG type="table" tableValues="0.11372549019607843 0.19215686274509805"></feFuncG>
+            <feFuncB type="table" tableValues="0.403921568627451 0.1411764705882353"></feFuncB>
+            <feFuncA type="table" tableValues="0 1"></feFuncA>
+        </feComponentTransfer>
+    </filter>
+  </svg>
+
+  <header class="c-global-header">
+    <div class="row">
+      <div class="small-12 medium-10 large-8 small-centered column">
+        <h1 class="ts">Council Member Voting Record</h1>
+        <p class="ts">Select a council member to view their voting record in the current Council Period. Legislation search results ordered chronologically from the most recent votes.</p>
+        <form class="js-serach-criteria">
+          <select>
+            <!--  populated w Members API. the value should be set to the councilmember ID -->
+            <option value="">Select a Councilmember</option>
+            <option value="one">One</option>
+            <option value="two">Two</option>
+            <option value="three">Three</option>
+          </select>
+          <fieldset class="row collapse">
+            <div class="small-12 medium-4 column">
+              <p class="ts text-left">Results to return (max: 100)</p>
+            </div>
+            <div class="small-12 medium-8 column">
+              <!-- <input class="range-slider" type="range" value="10" min="0" max="500">
+              <span class="range-value">0</span> -->
+              <input id="js-range" type="range" name="rangeInput" min="0" max="100" value="10" onchange="updateTextInput(this.value);">
+            <!-- </div>
+            <div class="small-12 medium-2 column"> -->
+              <input type="text" id="js-range-text-input" class="range-value" value="" placeholder="0-100" onchange="updateRangeVal(this.value);">
+            </div>
+          </fieldset>
+          <input type="submit" class="button" value="Submit">
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="row">
+    <h1>DC Council Member Voting Record</h1>
+    <ol>
+      <li>Select Council Member
+        <ul>
+          <li>Dropdown will be populated with the council member in the current coucil period (22)</li>
+          <li>Once selected, the council member's full name and title</li>
+        </ul>
+      </li>
+      <li>Filter Results: number of results (could be a range selector to limit number of total results)</li>
+      <li>Upon submission:
+        <ul>
+          <li>display results in a table below</li>
+        </ul>
+      </li>
+    </ol>
+
+    <table class="legislation-list">
+      <thead>
+        <tr class="row">
+          <th class="small-12 large-2 column">Bill</th>
+          <th class="small-12 large-9 column">Name</th>
+          <th class="small-12 large-1 column">Vote</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+  function updateTextInput(val) {
+    document.getElementById('js-range-text-input').value=val;
+  }
+  function updateRangeVal(val) {
+    document.getElementById('js-range').value=val;
+  }
+  </script>
+</body>
+</html>
