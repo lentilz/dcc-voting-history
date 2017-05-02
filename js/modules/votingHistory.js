@@ -1,6 +1,7 @@
 var form = document.querySelector('.js-search-criteria'),
     table = document.querySelector('.js-voting-record'),
-    body = document.getElementsByTagName('body')[0];
+    body = document.getElementsByTagName('body')[0],
+    main = document.getElementsByTagName('main')[0];
 
 // Voting search for most recent legislation
 // Voting Record API reference: http://lims.dccouncil.us/api/Help/Api/POST-v1-Voting-Search_rowLimit_offSet
@@ -89,8 +90,9 @@ function votingSearch (id, rowLimit){
         }
       } else if ( request.readyState === 4 && request.status !== 200) {
         // request error
+        // Most likely due to Mixed content error since github pages are on https
         errorMsg.innerHTML = 'Not able to access voting API. ' + request.statusText;
-        block.replaceChild(errorMsg, table);
+        main.replaceChild(errorMsg, table);
       }
     }
 }

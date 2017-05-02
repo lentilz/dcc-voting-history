@@ -30,7 +30,12 @@ table thead {
   border: none;
   line-height: 1;
 }
-
+.alert {
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+  background: #ee3024;
+}
 .duotone-filters {
     height: 0;
     left: -9999em;
