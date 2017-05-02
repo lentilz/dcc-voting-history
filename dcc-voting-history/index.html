@@ -36,7 +36,7 @@
         <h1 class="ts">Council Member Voting Record</h1>
         <p class="ts">Select a council member to view their voting record in the current Council Period. Legislation search results are ordered chronologically from the most recent votes.</p>
         <form class="js-search-criteria">
-          <select class="js-select">
+          <select class="js-select" required>
             <option value="">Select a Councilmember</option>
           </select>
           <fieldset class="row collapse">
@@ -44,7 +44,7 @@
               <p class="ts text-left">Results to return (max: 100)</p>
             </div>
             <div class="small-12 medium-8 column">
-              <input id="js-range" type="range" name="rangeInput" min="0" max="100" value="10" onchange="updateTextInput(this.value);">
+              <input id="js-range" type="range" name="rangeInput" min="1" max="100" value="10" onchange="updateTextInput(this.value);">
               <input type="text" id="js-range-text-input" class="range-value" value="" placeholder="0-100" onchange="updateRangeVal(this.value);">
             </div>
           </fieldset>
