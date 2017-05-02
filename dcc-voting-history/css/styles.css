@@ -17,10 +17,20 @@ main {
   display: none;
   padding: 40px 0;
 }
-
-.hide {
-  display: none;
+a {
+  color: #eb3025;
 }
+a:hover,
+a:focus {
+    color: #99293b;
+}
+table thead {
+  background: #2b205a;
+  color: #fefefe;
+  border: none;
+  line-height: 1;
+}
+
 .duotone-filters {
     height: 0;
     left: -9999em;
@@ -51,7 +61,7 @@ main {
   color: #ffffff;
   display: flex;
   min-height: 100vh;
-  padding: 60px 40px;
+  padding: 40px 20px;
   position: relative;
   text-align: center;
   transition: all 350ms ease-in-out;
@@ -67,7 +77,7 @@ main {
 }
 
 .c-global-header:before {
-  background: url('../img/capitol_pepe_silvia_ave.jpg') no-repeat fixed center;
+  background: url('../img/capitol_pepe_silvia_ave.jpg') no-repeat center;
   background-size: cover;
   content: '';
   filter: url(#duotone_redblue);
@@ -184,4 +194,35 @@ input[type="range"]:active::-moz-range-thumb {
 ::-moz-range-track {
   background: #d7dcdf;
   border: 0;
+}
+
+.loading {
+  display: block;
+  min-height: 100px;
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+
+.loading:before {
+  background: #fff;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.loading:after {
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+  background: url('../img/loop.svg') center no-repeat;
+  content: '';
+  display: -ms-flexbox;
+  display: block;
+  height: 100px;
+  left: 42%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 100px;
 }

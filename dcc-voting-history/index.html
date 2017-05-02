@@ -55,25 +55,22 @@
   </header>
 
   <main class="row">
-    <div class="small-12 large-10 column small-centered">
-      <article class="js-member-info">
-        <h2 class="js-member-name"></h2>
-      </article>
+    <h2 class="js-member-name"></h2>
 
-      <table class="legislation-list hide js-voting-record">
-        <thead>
-          <tr class="row">
-            <th class="small-12 large-2 column">Bill</th>
-            <th class="small-12 large-9 column">Name</th>
-            <th class="small-12 large-1 column">Vote</th>
-          </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-      </table>
-
-    </div>
+    <table class="legislation-list js-voting-record loading">
+      <caption>Showing <span class="js-total-results"></span> results</caption>
+      <thead>
+        <tr>
+          <th>Legislation #</th>
+          <th>Name</th>
+          <th>Video</th>
+          <th>Date</th>
+          <th>Voted</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
   </main>
 </body>
 </html>
