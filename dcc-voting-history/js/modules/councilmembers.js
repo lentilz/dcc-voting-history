@@ -183,6 +183,7 @@ for (var i = 0; i < data.members.length; i++) {
   var memOpt = option.cloneNode(true);
   // console.log( data.members[i].Name );
   memOpt.setAttribute("value", data.members[i].Id );
+  memOpt.setAttribute("data-title", data.members[i].MemberTitle);
   memOpt.innerHTML = data.members[i].Name;
 
   dropdown.appendChild( memOpt );

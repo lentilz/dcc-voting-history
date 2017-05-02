@@ -1,4 +1,5 @@
 var councilmembers = require(['require', './js/modules/councilmembers.js']);
+var votingHistory = require(['require', './js/modules/votingHistory.js']);
 
 // Handle range input behavior
 function updateTextInput(val) {

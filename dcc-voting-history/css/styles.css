@@ -14,6 +14,7 @@ body {
 }
 
 main {
+  display: none;
   padding: 40px 0;
 }
 
@@ -53,13 +54,16 @@ main {
   padding: 60px 40px;
   position: relative;
   text-align: center;
-  transition: all 300ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
 .c-global-header label {
   color: #ffffff;
 }
 .js-form-active .c-global-header {
   min-height: 100px;
+}
+.js-form-active main {
+  display: block;
 }
 
 .c-global-header:before {

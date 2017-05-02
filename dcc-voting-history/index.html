@@ -37,7 +37,6 @@
         <p class="ts">Select a council member to view their voting record in the current Council Period. Legislation search results ordered chronologically from the most recent votes.</p>
         <form class="js-search-criteria">
           <select class="js-select">
-            <!--  populated w Members API. the value should be set to the councilmember ID -->
             <option value="">Select a Councilmember</option>
           </select>
           <fieldset class="row collapse">
@@ -57,11 +56,11 @@
 
   <main class="row">
     <div class="small-12 large-10 column small-centered">
-      <article class="member-info hide">
-        <h2><span class="js-member-title">Title </span>Council Member Name</h2>
+      <article class="js-member-info">
+        <h2 class="js-member-name"></h2>
       </article>
 
-      <table class="legislation-list hide">
+      <table class="legislation-list hide js-voting-record">
         <thead>
           <tr class="row">
             <th class="small-12 large-2 column">Bill</th>
