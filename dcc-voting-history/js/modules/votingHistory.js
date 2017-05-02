@@ -70,7 +70,6 @@ function votingSearch (id, rowLimit){
           videoLink.setAttribute("href", votingRecord[i].VideoLink);
           videoLink.setAttribute("target", "_blank");
           videoLink.innerHTML = icon ;
-          console.log( videoLink );
           video.appendChild( videoLink );
 
           // Add td values
@@ -109,6 +108,9 @@ form.addEventListener('submit', function(e){
   console.log(selectedMember, id, limit);
   body.classList.add("js-form-active");
   table.classList.add("loading");
+
+  // Reset table output
+  document.querySelector('.js-voting-record tbody').innerHTML = '';
 
   // Display selected member info
   name.innerHTML = memberTitle + " " + selectedMember;
